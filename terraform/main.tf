@@ -22,6 +22,7 @@ module "sandbox_aft" {
   custom_fields = {
     group = "non-prod"
     vpc = "delete_default_vpc"
+    test_vpc_delete = "mustbetrue"
   }
 
   account_customizations_name = "sandbox"
