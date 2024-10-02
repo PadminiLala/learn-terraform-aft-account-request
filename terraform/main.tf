@@ -21,6 +21,7 @@ module "sandbox_aft" {
 
   custom_fields = {
     group = "non-prod"
+    test  = "test"
   }
 
   account_customizations_name = "sandbox"
