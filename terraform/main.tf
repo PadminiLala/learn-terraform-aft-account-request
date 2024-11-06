@@ -56,10 +56,10 @@ module "nonprod_aft" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "padmini.lala+nonprod_aft@hilton.com"
+    AccountEmail              = "padmini.lala+nonprod@hilton.com"
     AccountName               = "nonprod_aft"
     ManagedOrganizationalUnit = "sandbox"
-    SSOUserEmail              = "padmini.lala+nonprod_aft@hilton.com"
+    SSOUserEmail              = "padmini.lala+nonprod@hilton.com"
     SSOUserFirstName          = "padmini"
     SSOUserLastName           = "nonprod_aft"
   }
