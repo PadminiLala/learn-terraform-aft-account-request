@@ -52,29 +52,29 @@ module "dev_aft" {
   }
   account_customizations_name = "dev"
 }
-# module "nonprod_aft" {
-#   source = "./modules/aft-account-request"
+module "nonprod_aft" {
+  source = "./modules/aft-account-request"
 
-#   control_tower_parameters = {
-#     AccountEmail              = "padmini.lala+nonprod@hilton.com"
-#     AccountName               = "nonprod_aft"
-#     ManagedOrganizationalUnit = "sandbox"
-#     SSOUserEmail              = "padmini.lala+nonprod@hilton.com"
-#     SSOUserFirstName          = "padmini"
-#     SSOUserLastName           = "nonprod_aft"
-#   }
+  control_tower_parameters = {
+    AccountEmail              = "padmini.lala+nonprod@hilton.com"
+    AccountName               = "nonprod_aft"
+    ManagedOrganizationalUnit = "sandbox"
+    SSOUserEmail              = "padmini.lala+nonprod@hilton.com"
+    SSOUserFirstName          = "padmini"
+    SSOUserLastName           = "nonprod_aft"
+  }
 
-#   account_tags = {
-#     "Learn Tutorial" = "AFT"
-#   }
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
 
-#   change_management_parameters = {
-#     change_requested_by = "Padmini"
-#     change_reason       = "Learn AFT Control Tower Terraform"
-#   }
+  change_management_parameters = {
+    change_requested_by = "Padmini"
+    change_reason       = "Learn AFT Control Tower Terraform"
+  }
 
-#   custom_fields = {
-#     group = "non-prod"
-#   }
-#   account_customizations_name = "nonprod"
-# }
+  custom_fields = {
+    group = "non-prod"
+  }
+  account_customizations_name = "nonprod"
+}
