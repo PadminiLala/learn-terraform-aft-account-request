@@ -25,3 +25,30 @@ module "sandbox_aft" {
 
   account_customizations_name = "sandbox"
 }
+module "configtest" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "padmini.lala+configtestCT@hilton.com"
+    AccountName               = "configtest"
+    ManagedOrganizationalUnit = "sandbox"
+    SSOUserEmail              = "padmini.lala+configtestCT@hilton.com"
+    SSOUserFirstName          = "Admin"
+    SSOUserLastName           = "User"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Padmini"
+    change_reason       = "Learn AFT Control Tower Terraform"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "configtest"
+}
