@@ -52,14 +52,14 @@ module "configtest" {
 
   account_customizations_name = "configtest"
 }
-module "regiontest" {
+module "networktest" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "padmini.lala+regiontest@hilton.com"
-    AccountName               = "regiontest"
+    AccountEmail              = "padmini.lala+networktest@hilton.com"
+    AccountName               = "networktest"
     ManagedOrganizationalUnit = "sandbox"
-    SSOUserEmail              = "padmini.lala+regiontest@hilton.com"
+    SSOUserEmail              = "padmini.lala+networktest@hilton.com"
     SSOUserFirstName          = "Admin"
     SSOUserLastName           = "User"
   }
@@ -77,15 +77,16 @@ module "regiontest" {
     group = "non-prod"
   }
 
-  account_customizations_name = "regiontest"
+  account_customizations_name = "networktest"
 }
+
 module "guarddutytest" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
     AccountEmail              = "padmini.lala+guarddutytest@hilton.com"
     AccountName               = "guarddutytest"
-    ManagedOrganizationalUnit = "regions_test_ou"
+    ManagedOrganizationalUnit = "sandbox"
     SSOUserEmail              = "padmini.lala+guarddutytest@hilton.com"
     SSOUserFirstName          = "Admin"
     SSOUserLastName           = "User"
@@ -103,4 +104,6 @@ module "guarddutytest" {
   custom_fields = {
     group = "non-prod"
   }
+
+  account_customizations_name = ""
 }
