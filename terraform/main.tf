@@ -79,14 +79,14 @@ module "regiontest" {
 
   account_customizations_name = "regiontest"
 }
-module "regiontest" {
+module "guarddutytest" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "padmini.lala+regiontest@hilton.com"
-    AccountName               = "regiontest"
+    AccountEmail              = "padmini.lala+guarddutytest@hilton.com"
+    AccountName               = "guarddutytest"
     ManagedOrganizationalUnit = "regions_test_ou"
-    SSOUserEmail              = "padmini.lala+regiontest@hilton.com"
+    SSOUserEmail              = "padmini.lala+guarddutytest@hilton.com"
     SSOUserFirstName          = "Admin"
     SSOUserLastName           = "User"
   }
