@@ -107,3 +107,31 @@ module "guarddutytest" {
 
   account_customizations_name = ""
 }
+
+module "aftpipelinetest" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "padmini.lala+aftpipelinetest@hilton.com"
+    AccountName               = "aftpipelinetest"
+    ManagedOrganizationalUnit = "sandbox"
+    SSOUserEmail              = "padmini.lala+aftpipelinetest@hilton.com"
+    SSOUserFirstName          = "Admin"
+    SSOUserLastName           = "User"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Padmini"
+    change_reason       = "Learn AFT Control Tower Terraform"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = "aftpipelinetest"
+}
