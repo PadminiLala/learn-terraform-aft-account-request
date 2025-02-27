@@ -135,3 +135,30 @@ module "aftpipelinetest" {
 
   account_customizations_name = "aftpipelinetest"
 }
+module "configorgtest" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "padmini.lala+configorgtest@hilton.com"
+    AccountName               = "configorgtest"
+    ManagedOrganizationalUnit = "sandbox"
+    SSOUserEmail              = "padmini.lala+configorgtest@hilton.com"
+    SSOUserFirstName          = "Admin"
+    SSOUserLastName           = "User"
+  }
+
+  account_tags = {
+    "Learn Tutorial" = "AFT"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Padmini"
+    change_reason       = "Learn AFT Control Tower Terraform"
+  }
+
+  custom_fields = {
+    group = "non-prod"
+  }
+
+  account_customizations_name = ""
+}
